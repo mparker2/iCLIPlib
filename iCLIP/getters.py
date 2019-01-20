@@ -3,6 +3,8 @@ import numpy as np
 import collections
 from functools import partial
 from bx.bbi.bigwig_file import BigWigFile
+
+import cgatcore.experiment as E
 import pysam
 
 # 2 to 3 compatibility:
