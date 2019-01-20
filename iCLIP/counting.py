@@ -9,12 +9,12 @@ from functools import partial
 from bx.bbi.bigwig_file import BigWigFile
 import pysam
 
-import CGAT.Experiment as E
-import CGAT.GTF as GTF
+import cgatcore.experiment as E
+import cgat.GTF as GTF
 
-from utils import TranscriptCoordInterconverter
+from .utils import TranscriptCoordInterconverter
 
-from getters import make_getter
+from .getters import make_getter
 
 
 

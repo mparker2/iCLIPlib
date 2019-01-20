@@ -4,6 +4,14 @@ import collections
 from functools import partial
 from bx.bbi.bigwig_file import BigWigFile
 import pysam
+
+# 2 to 3 compatibility:
+try:
+  basestring
+except NameError:
+  basestring = str
+
+
 profile = collections.namedtuple("profile", ["centre",
                                              "read_end",
                                              "use_deletions",

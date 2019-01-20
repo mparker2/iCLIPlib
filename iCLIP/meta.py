@@ -7,10 +7,10 @@ such profiles.
 
 import numpy as np
 import pandas as pd
-import CGAT.GTF as GTF
+import cgat.GTF as GTF
 
-from counting import count_transcript
-from counting import count_intervals
+from .counting import count_transcript
+from .counting import count_intervals
 
 
 ##################################################

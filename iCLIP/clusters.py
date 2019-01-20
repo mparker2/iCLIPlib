@@ -1,14 +1,14 @@
 '''This file contains functions and classes relating to calling iCLIP
 clusters'''
 
-import CGAT.Experiment as E
+import cgatcore.experiment as E
 import numpy as np
 import pandas as pd
-import CGAT.GTF as GTF
+import cgat.GTF as GTF
 
-from utils import spread, rand_apply, TranscriptCoordInterconverter
-from counting import count_transcript, count_intervals
-from kmers import LiteExon
+from .utils import spread, rand_apply, TranscriptCoordInterconverter
+from .counting import count_transcript, count_intervals
+from .kmers import LiteExon
 
 
 def Ph(profile, exon, nspread):
@@ -50,9 +50,9 @@ def fdr(profile, exon, nspread, randomizations):
     try:
         fdrs = fdrs.loc[profile.index]
     except KeyError:
-        print profile.index
-        print spread_profile.index
-        print fdrs.index
+        print(profile.index)
+        print(spread_profile.index)
+        print(fdrs.index)
         raise
     fdrs = fdrs.reindex(profile.index)
     return fdrs
