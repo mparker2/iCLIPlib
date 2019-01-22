@@ -36,7 +36,7 @@ import sys
 import os
 import cgatcore.experiment as E
 from cgat import GTF
-from cgat import IOTools
+from cgatcore import iotools as IOTools
 from cgat import Intervals
 import pysam
 import pandas
@@ -201,8 +201,8 @@ def main(argv=None):
                       help="Use this matrix for normalizing (e.g. RNA data")
     parser.add_option("--sort-order-file", dest="sort_file", type="string",
                       default=None,
-                      help="Two column file containing gene names in the first
-                      column and a numeric value to sort on in the second")
+                      help=("Two column file containing gene names in the first "
+                            "column and a numeric value to sort on in the second"))
 
     # add common options (-h/--help, ...) and parse command line
     (options, args) = E.start(parser, argv=argv)

@@ -154,7 +154,7 @@ def main(argv=None):
         counts_matrix = counts_matrix.reset_index(drop=True)
         counts_matrix = counts_matrix.transpose()
 
-        counts_matrix.to_csv(IOTools.openFile(options.matrix, "w"),
+        counts_matrix.to_csv(IOTools.open_file(options.matrix, "w"),
                              sep="\t",
                              index=True,
                              index_label="transcript_id")
